@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <body>
+  
+    <div id="my-react-app"></div>
+
+    <script>
+      var el = React.createElement("div",{id:"inner-div-element", key:"uniq-react-key-1"},
+               React.createElement("h1", {id: "header-id"}, "Hi Deepa!"));
+
+      var another_el = React.createElement("p", {id:"para-id", key:"uniq-react-key-2"}, "my para");
+
+      var element_list = [el, another_el]
+
+      var outer_div_el = React.createElement("div", {id:"outer-div-id"}, element_list);
+
+      ReactDOM.render(outer_div_el, document.getElementById('my-react-app'));
+    </script>
+  </body>
+</html>
